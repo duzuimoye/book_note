@@ -59,6 +59,11 @@
 	  //用get_status方法，尽管statusObject并没有一个名为get_status的方法
 	  var status=Quo.prototype.get_status.apply(statusObject);
 	  //status的值为 'A-OK'
+# 参数
+	当参数被调用时，就会得到一个免费配送的参数，那就是arguments数组。
+	
+# 返回
+	如果函数调用时在前面加上了一个new前缀，且返回值不是一个对象，则返回this（该新对象）
 # 异常
 
 	js提供了异常处理机制，异常是干扰程序的正常流程的不寻常事故，当发现这样的事故时，程序抛出一个异常
@@ -132,4 +137,17 @@
 最后返回这个特权函数，或者把他们保存到一个可以访问到的地方
 
 * 使用模块可以摒弃全局变量的使用
+# 级联
+	在一些方法没有返回值，如果我们让这些方法返回this 而不是undefined 就可以启用级联，
+	getElement('myboxdiv')
+	.move(350,150)
+	.width(100)
+	.height(100)
+	.color(red)
+# 柯里化
+	函数也是值，从而我们可以用有趣的方式去操作函数值，柯里化允许我们把函数与传递给它的参数结合，从而产生一个新的函数。
+	var add = add.curry(1);
+	document.writeln(add(6));
+# 记忆
+	函数可以把先前操作的结果记录在某个对象里，从而避免无谓的重复的运算。
 
