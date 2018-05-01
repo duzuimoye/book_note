@@ -59,14 +59,14 @@
 	  //用get_status方法，尽管statusObject并没有一个名为get_status的方法
 	  var status=Quo.prototype.get_status.apply(statusObject);
 	  //status的值为 'A-OK'
-#异常
+# 异常
 
 	js提供了异常处理机制，异常是干扰程序的正常流程的不寻常事故，当发现这样的事故时，程序抛出一个异常
 	递归
 
 	递归函数就是会直接或间接的调用自身的一种函数。把一个问题分解为一组相似的子问题，每一个都用一个寻常解去解决。
 	//  还需要多看看，不是很好的理解
-#作用域
+# 作用域
 
 	在编程语言中，作用域控制着变量与参数的可见性及生命周期。减少了名称冲突，并且提供了自动内存管理。
 	    var foo =function(){
@@ -81,7 +81,7 @@
 		bar();
 		此时a=21 b=5
 	    };
-#闭包
+# 闭包
 
 	作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了this和argments）。
 	和以对象字面量形式去初始化myObject不同，这里通过调用一个函数的形式去初始化myObject,该函数会返回一个对象字面量
@@ -113,7 +113,7 @@
 	  //构造一个quo实例
 	  var myQuo = quo("zengkai");
 	  console.log(myQuo.get_status());//zengkai 
-#回调
+# 回调
 
 	request=prepare_the_request();
 	send_request_asynchronously(request,function(response){
